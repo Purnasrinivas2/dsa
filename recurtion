@@ -1,0 +1,67 @@
+//Recursion is function that calls itslef untill and unless the base condition  meet.
+#power of a num 
+
+def power(x,n):
+    if n>0:
+        return x*power(x,n-1)
+    else:
+        return 1
+n=int(input())
+x=int(input())
+
+print("",power(x,n))
+    
+    
+    
+##fibonacci
+def fibonacci(n):
+    if n<=1:
+        return 1
+    else:
+        return fibonacci(n-1)+fibonacci(n-2)
+n=5
+print("",fibonacci(n))
+    
+    
+## first occurence     
+def firstoccurence(arr,n,i):
+    
+    if i==n:
+        return
+    
+    elif arr[i]==val:
+        return i
+        
+    else:
+        i=i+1
+        return firstoccurence(arr,n,i)
+
+
+
+
+
+
+arr=[1,2,3,4,5,6,7,1,2,34,5,7]
+val=7
+print("",firstoccurence(arr,len(arr),0))
+    
+    
+
+    
+##lastoccurence 
+    
+def lastoccurence(arr,n,i):
+    if i==n:
+        return
+    elif arr[n-i-1]==val:
+        return i
+    else:
+        i=i+1
+        return lastoccurence(arr,n,i)
+
+
+arr=[1,2,34,5,6,7,1,2,3,8]
+n=len(arr)
+
+val=2
+print("",lastoccurence(arr,len(arr),0))
