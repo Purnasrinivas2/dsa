@@ -1,0 +1,80 @@
+##push and pop operatons on stack
+
+
+def isEmpty(stack):
+    return len(stack)==0
+    
+def push(stack,x):
+    stack.append(x)
+    print(x +" pushed  to stack" )
+    
+    
+    
+def pop(stack):
+    if(isEmpty(stack)):
+        return "-1"
+    return stack.pop()
+        
+def peek(stack):
+    if(isEmpty(stack)):
+        return "-1"
+    return stack[len(stack)-1]
+    
+    
+stack =createstack()
+push(stack,str(3))
+push(stack,str(7))
+push(stack,str(88))
+print(pop(stack))
+
+
+
+---------------------------------------------------------
+##creating stack using classes and objects
+from sys import maxsize
+class stack:
+    def __int__(self):
+        self.stack=[]
+    
+    
+    def isEmpty(self):
+        return len(self.stack)==0
+        
+        
+    def push(self,x):
+        self.stack.append(x)
+        print(x)
+        
+        
+    def pop(self):
+        if self.isEmpty():
+            return str(-maxsize-1)
+        return self.stack.pop()
+        
+        
+        
+    def size(self):
+        return len(self.stack)
+        
+        
+        
+    def display(self):
+        print("".join(self.stack[i] for i in range (len(slef.stack)-1,-1,-1)))
+        
+        
+        
+s=stack()
+s.push(str(5))
+s.push(str(8))
+s.push(str(3))
+s.push(str(2))
+s.display()
+
+
+
+--------------------------------------------------------
+
+
+
+
+
