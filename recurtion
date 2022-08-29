@@ -1,4 +1,26 @@
 //Recursion is function that calls itslef untill and unless the base condition  meet.
+
+
+
+
+factorial of a num
+
+def fac(n):
+    if n>1:
+        return n*fac(n-1)
+    else:
+        return 1
+n=int(input())        
+print(fac(n))
+
+
+
+
+
+
+
+
+
 #power of a num 
 
 def power(x,n):
@@ -14,29 +36,34 @@ print("",power(x,n))
     
     
 ##fibonacci
-def fibonacci(n):
+def fib(n):
     if n<=1:
-        return 1
+        return n
+        
     else:
-        return fibonacci(n-1)+fibonacci(n-2)
+        return fib(n-1)+fib(n-2)
+        
 n=5
-print("",fibonacci(n))
+for i in range(n):
+    print(fib(i))
     
     
 ## first occurence     
-def firstoccurence(arr,n,i):
-    
+arr=[1,6,4,5,4,6,3,4]
+n=6
+i=0
+def first(arr,n,i):
+   
     if i==n:
-        return
-    
-    elif arr[i]==val:
         return i
-        
+    elif arr[i]==n:
+        return i 
     else:
-        i=i+1
-        return firstoccurence(arr,n,i)
-
-
+        i+=1
+        return first(arr,n,i)
+            
+        
+print(first(arr,n,i))
 
 
 
